@@ -1,0 +1,19 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}Suppression d'une annonce{% endblock title %}
+
+{% block content %}
+<h1>Supprimer une annonce</h1>
+<p>Voulez-vous vraiment supprimer cette annonce ?</p>
+<p>({{listing.name}})</p>
+<br>
+<form method="POST" action="">
+  {% csrf_token %}
+  <input type="submit" value="Confirmer">
+</form>
+<ul>
+  <li>
+    <a href="{% url 'listings:detail' listing.id %}">Retour</a>
+  </li>
+</ul>
+{% endblock content %}

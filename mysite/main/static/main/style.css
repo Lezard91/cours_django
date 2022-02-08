@@ -1,0 +1,42 @@
+
+nav>ul>li {
+	list-style: none;
+	font-size: 2em;
+	background-color: red;
+}
+
+li {
+	color: blue ;
+	font-size: 1.6em;
+	background-color: red;
+}
+
+li.active {
+	background-color: lime;
+}
+
+img {
+	max-width: 99vw;
+}
+
+a {
+	text-decoration-line: none;
+	color: black;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	text-decoration-line: underline;
+	color: lime;
+}
+
+h1 {
+	text-decoration-line: underline;
+}
+p {
+	font-size: 1.4em;
+	padding-left: 20px;
+}

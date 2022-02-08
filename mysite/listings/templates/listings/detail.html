@@ -1,0 +1,16 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}{{listing.name}}{% endblock title %}
+
+{% block content %}
+<h1>{{listing.name}}</h1>
+<p>{{listing.description}}</p>
+<p>{{listing.price}}</p>
+
+<ul>
+    <li><a href="{% url 'listings:add' %}">Ajouter une annonce</a></li>
+    <li><a href="{% url 'listings:update_listing' listing.id %}">Modifier une annonce</a></li>
+    <li><a href="{% url 'listings:delete_listing' listing.id %}">Supprimer une annonce</a></li>
+    <li><a href="{% url 'listings:index' %}">Retour</a></li>
+</ul>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}{{band.name}}{% endblock title %}
+
+{% block content %}
+<h1>Modification du groupe</h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Envoyer">
+</form>
+<ul>
+    <li>
+        <a href="{% url 'bands:detail' band.id %}">Retour</a>
+    </li>
+</ul>
+
+{% endblock content %}

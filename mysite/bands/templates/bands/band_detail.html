@@ -1,0 +1,15 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}{{band.name}}{% endblock title %}
+
+{% block content %}
+<h1>{{band.name}}</h1>
+<p>{{band.description}}</p>
+<p>Créé le : {{band.created_at}}</p>
+<ul>
+    <li><a href="{% url 'bands:add_band' %}">Ajouter un groupe</a></li>
+    <li><a href="{% url 'bands:update_band' band.id %}">Modifier un groupe</a></li>
+    <li><a href="{% url 'bands:delete_band' band.id %}">Supprimer un groupe</a></li>
+    <li><a href="{% url 'bands:index' %}">Retour</a></li>
+</ul>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}Groupe{% endblock title %}
+
+{% block content %}
+<h1>Les groupes</h1>
+
+<ul>
+  {% for band in bands %}
+  <li><a href="{% url 'bands:detail' band.id %}">{{band.name}}</a></li>
+  {% endfor %}
+</ul>
+<br>
+<ul>
+  <li><a href="{% url 'bands:add_band' %}">Ajouter un groupe</a></li>
+  <li><a href="{% url 'index' %}">Retour</a></li>
+</ul>
+{% endblock content %}

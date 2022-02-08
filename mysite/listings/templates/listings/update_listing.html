@@ -1,0 +1,19 @@
+{% extends 'main/_base.html' %}
+
+{% block title %}{{listing.name}}{% endblock title %}
+
+{% block content %}
+<h1>Modification de l'annonce</h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Envoyer">
+</form>
+<ul>
+    <li>
+        <a href="{% url 'listings:detail' listing.id %}">Retour</a>
+    </li>
+</ul>
+
+{% endblock content %}
